@@ -1,0 +1,19 @@
+import React from "react";
+import {A} from "../App";
+
+
+export default function Welcome({color}){
+  return(<div>
+    <h1 style={{color:"red"}}>User Context Type</h1>
+    <h2>  {color} </h2>
+    <A.Consumer>
+      {
+        a =>{
+          return (<div><button onClick={a}>Click Here</button></div>)
+        }
+      }
+    </A.Consumer>
+    
+
+    </div>)
+}

@@ -1,0 +1,17 @@
+import React from 'react'
+
+export default function Hello3({name}) {
+   
+
+    if(name ==="Ravi"){
+        throw new Error("Ravi throws a error");
+    }
+
+
+
+    return (
+        <div>
+            <h1>{name}</h1>
+        </div>
+    )
+    }

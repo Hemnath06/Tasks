@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<script type="text/javascript">
+	  function check(){	
+        
+        //USERNAME VALIDATION
+
+        var name = document.regForm.Name.value;
+        if(name.length<5 || name.length>20){
+        	alert("Username should have between the length of 5 -  20 ");
+        	document.regForm.Name.focus();
+        }
+        
+	   
+        //PASSWORD VALIDATION
+
+	   var password = document.regForm.psd.value;
+	   if(password.length === 0){
+	   	alert("Please fill the password");
+	   	document.regForm.psd.focus();
+	   }
+       
+      
+         //EMAIL VALIDATION
+
+       var a = document.regForm.email.value;
+	   var b = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+	   if(a.match(b)){
+	   	    alert(a + " is valid EmailId")
+	   }
+	   else{
+			alert("EmailId is not valid");
+	   }
+		       
+
+		//ADDRESS VALIDATION
+        
+       var Address = document.regForm.address.value;
+	   if(Address.length === 0){
+	   	alert("Please fill the Address");
+	   	document.regForm.address.focus();
+	   }
+       
+
+        //PRODUCTS VALIDATION
+       
+       var checked = 0;
+       var val = document.getElementById('value');
+       var c = val.getElementsByTagName("INPUT");
+       for(var i=0;i<c.length;i++){
+          if(c[i].checked === true){
+          	checked++;
+          }    
+        }
+
+        if(checked > 1){
+             pass;	
+        }
+        
+        else{
+        	alert("2 checkbox should be selected")
+        }
+
+
+      }
+
+	</script>
+</head>
+<body>
+	<br>
+      <h1 style="padding-left: 650px;">Validation Form</h1>
+      <form method="get" name="regForm" style="padding-left: 600px ">
+         <table border="3" cellpadding="8" cellspacing="4">
+          <tr>
+            <td>Name</td>
+            <td><input type="text" name="Name" /></td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td><input type="password" name="psd" /></td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td><input type="text" name="email" /></td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td><textarea type="text" cols="20" rows="10" name="address"></textarea></td>
+          </tr>
+          <tr id="value">
+            <td>Products</td>
+            <td>
+              <input type="checkbox" value="dell" name="product"><label>Dell Laptop</label><br>
+              <input type="checkbox" value="hp" name="product"><label>HP Laptop</label><br>
+              <input type="checkbox" value="mac" name="product" ><label>Mac Laptop</label></td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>
+              <input type="radio" value="male" name="Gender" checked="true">
+              <label>Male</label><br>
+              <input type="radio" value="female" name="Gender"><label>Female</label>
+            </td>
+          </tr>
+          <tr>
+             <td><input type="button" value="submit" onClick="check()" /></td>
+          </tr>
+        </table>
+      </form>
+     <br><br><br><br>
+
+</body>
+</html>

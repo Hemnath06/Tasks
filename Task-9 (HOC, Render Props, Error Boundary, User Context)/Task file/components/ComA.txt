@@ -1,0 +1,13 @@
+import React from "react";
+import {A} from "../App";
+import ComB from "./ComB"
+
+export default function ComA({color}){
+  return(<div>
+    
+
+    
+    <ComB  color={color}/>
+
+    </div>)
+}

@@ -1,0 +1,16 @@
+import React, { Component } from "react";
+import Hoc from "./HocComponent";
+
+class Welcome extends Component{
+    
+
+    render(){
+        return(<div>
+            <h1>Count: {this.props.value} </h1>
+            <button onClick={this.props.increment}>click Here</button>
+        </div>)
+    }
+}
+
+
+export default Hoc(Welcome);

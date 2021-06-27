@@ -1,0 +1,18 @@
+import React, { Component } from "react";
+import Hoc from "./HocComponent";
+
+
+
+export default class Hello1 extends Component{
+    
+    
+    
+    
+    render(){
+        return(<div>
+            <h1 onMouseOver={this.props.increment}>Count: {this.props.value} </h1>
+        </div>)
+    }
+}
+
+

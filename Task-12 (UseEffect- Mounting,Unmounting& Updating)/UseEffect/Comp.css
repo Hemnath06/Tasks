@@ -1,0 +1,109 @@
+
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins",sans-serif;
+}
+
+section{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+}
+
+
+section .imgBx{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+section .imgBx img{
+	position: absolute;
+	top: 0;
+    left: 0;
+	width: 100%;
+	height: 100%;
+    object-fit: cover;	
+}
+
+section .contentBx{
+    position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+    margin-left: 400px;
+    
+}
+
+section .contentBx .inputBx button{
+    width: 350px;
+    height: 100px;
+    color: #fff;
+    background-color: rgb(242 46 46 / 90%);
+    border-radius: 10px;
+    outline: none;
+    border: 4px solid #fff;
+    cursor: pointer;
+    font-size: 27px;
+    transition: ease 0.5s;
+    margin-left: 50px;
+    font-family: Blackadder ITC;
+    
+}
+
+section .contentBx .inputBx button:hover{
+    background-color: #ff8c00;
+    border: 8px solid #000;
+    font-size: 30px;
+    border-radius: 20px;
+    color: #000;
+}
+
+
+section .header h1{
+    position: relative;
+    width: 350px;
+    height: 100px;
+    color: #fff;
+    background-color: #38dff2;
+    border-radius: 10px;
+    margin-left: 633px;
+    margin-top: 126px;
+    text-align: center;
+    padding: 23px 20px;
+    font-size: 50px;
+    font-family: Baskerville Old Face;
+}
+
+.btn{
+    position: relative;
+    margin-left: 700px;
+    width: 100px;
+    margin-top: 40px;
+    padding: 10px 20px;
+    color: #000;
+    border-radius: 10px;
+    outline: none;
+    background: transparent;
+    font-size: 20px;
+}
+
+.higher{
+    position: relative;
+    margin-left: 700px;
+    width: 100px;
+    margin-top: 40px;
+    padding: 10px 20px;
+    color: #000;
+    border-radius: 10px;
+    outline: none;
+    background: transparent;
+    font-size: 60px;
+}
+

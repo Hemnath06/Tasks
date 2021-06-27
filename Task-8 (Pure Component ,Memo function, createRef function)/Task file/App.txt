@@ -1,0 +1,67 @@
+import React, { Component } from "react";
+import Welcome from "./component1/Welcome";
+import Hello from "./component1/Hello";
+import Hello1 from "./component1/Hello";
+import Welcome1 from "./component1/Welcome1";
+import Render from "./component1/Render";
+import Hello3 from "./component2/hello";
+import "./style.css";
+import Hoc from "./component1/HocComponent.js";
+import ErrorBoundary from "./component1/ErrorBoundary";
+import ComA from "./components/ComA";
+
+
+
+export const A = React.createContext();
+
+export default class App extends Component {
+  
+  constructor(){
+    super();
+    this.state={
+      name:"Good Morning"
+    }
+  }
+
+  change=()=>{
+    this.setState({
+      name:"Sweet Dreams"
+    })
+  }
+
+  render(){
+  return(
+    <div className="App">
+      <h1 style={{color:"blue"}}>Hoc Component</h1>
+      <Hello />
+      <Welcome />
+      
+
+      <h1 style={{color:"green"}}>Rendering Props</h1>
+      <Render render={
+        (a,b)=>(<Hello1 value={a} increment={b} />)
+      } />
+
+      <Render render={
+        (a,b)=>(<Welcome1 value={a} increment={b} />)
+      } />
+      
+      <h1 style={{color:"red"}}>Error Boundary</h1>
+
+      <ErrorBoundary>
+        <Hello3 name="Ravi" />
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
+         <Hello3 name="Ram" />
+      </ErrorBoundary>
+
+      <A.Provider value={this.change}>
+        <ComA color={this.state.name} />
+      </A.Provider>
+      
+
+
+    </div>
+  )
+}}
