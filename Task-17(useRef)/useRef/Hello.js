@@ -13,6 +13,7 @@ export default function Hello(){
       setTimer((prevState)=>(prevState+1))
     },1000)
   A.current.focus();
+    return()=>{clearInterval(interval.current)}
   },[])
 
   const bg={
