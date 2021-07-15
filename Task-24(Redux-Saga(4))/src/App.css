@@ -1,0 +1,9 @@
+.App{
+  text-align:center;
+  background-image: url("1.jpg");
+  
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: Curlz MT;
+}
